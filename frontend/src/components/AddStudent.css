@@ -1,0 +1,41 @@
+.inputcont{
+    width: 100%;
+    height: 50px;
+    background-color: #e6e6e6;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.form{ 
+margin-top: 100px;
+width: 400px;
+border-radius: 10px;
+background-color: white;
+box-shadow: 0 5px 10px 5px #b3b3b3;
+padding: 20px;
+}
+.cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.subButton{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: #00b3b3;
+    
+
+}
+.subButton:hover{
+    background-color: teal;
+}
