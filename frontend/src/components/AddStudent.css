@@ -20,6 +20,7 @@ border-radius: 10px;
 background-color: white;
 box-shadow: 0 5px 10px 5px #b3b3b3;
 padding: 20px;
+
 }
 .cont{
     width: 100%;
@@ -33,6 +34,9 @@ padding: 20px;
     width: 100px;
     height: 30px;
     background-color: #00b3b3;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
     
 
 }
