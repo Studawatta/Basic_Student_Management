@@ -1,12 +1,16 @@
 import React,{useState} from 'react';
 import './AddStudent.css';
 import axios from 'axios';
-
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import {BiArrowBack} from "react-icons/bi";
 const AddStudent = () => {
 
    const [name,setName] = useState("");
    const [age,setAge] = useState("");
    const [gender,setGender] = useState("");
+
+   const navigate = useNavigate();
 
    function sendData(e){
     e.preventDefault();
@@ -25,10 +29,15 @@ const AddStudent = () => {
     }).catch((err)=>{
         alert(err);
     })
+    navigate('/');
    }
 
     return (
         <div>
+            <div>
+            <Link to="/" className='back'> <BiArrowBack className='backarrow'/>Go back</Link>
+            </div>
+            
             <div className='cont'>
                 <form className='form' onSubmit={sendData}>
                     <div className='inputcont'>
