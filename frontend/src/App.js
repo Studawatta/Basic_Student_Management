@@ -1,9 +1,8 @@
 
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
-import AddStudent from './components/AddStudent';
-import Allstudents from "./components/Allstudents";
-import Header from './components/Header';
-import Home from './components/Home';
+import Home from "./components/home/Home";
+
+
 
 function App() {
   return (
@@ -12,14 +11,14 @@ function App() {
       <Router>
 
       
-<Header/>
+{/* <Header/> */}
 
 <Routes>
  
-{/* <Route path='/add' component={AddStudent} exact /> */}
-<Route path='/add' element={<AddStudent/>} />
-{/* <Route path='/' element={<AllStudents/>} /> */}
-<Route path="/" element={<Allstudents/>} />
+
+<Route path='/' element={<Home/>} />
+
+{/* <Route path="/" element={<Allstudents/>} /> */}
 </Routes>
 
 
