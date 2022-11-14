@@ -6,7 +6,58 @@
     top: 0; 
     display: flex;
     align-items: center;
-   
-    
+    justify-content: space-between;
  
+}
+.navItemCont{
+  display: flex;
+  width: 400px;
+  /* justify-content: space-between;
+  background-color: red; */
+}
+.navItem{
+  text-decoration: none;
+  width: 100px;
+
+  border-right: 1px solid #ccc;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.navItem:hover{
+  color: white;
+}
+#cont{
+  border: none;
+}
+.SignInReg{
+width: 400px;
+
+display: flex;
+
+}
+.signIn{
+ text-decoration: none;
+ width: 100px;
+ color: black;
+ border-right: 1px solid #ccc;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.signIn:hover{
+  color: white;
+}
+.reg{
+  text-decoration: none;
+  width: 100px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reg:hover{
+  color: white;
 }
