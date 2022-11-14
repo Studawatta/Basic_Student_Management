@@ -6,12 +6,19 @@
     top: 0; 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
  
+}
+.Container{
+  display: flex;
+  
+  width: 85%;
+  justify-content: space-between;
 }
 .navItemCont{
   display: flex;
   width: 400px;
+  
   /* justify-content: space-between;
   background-color: red; */
 }
@@ -26,14 +33,14 @@
   justify-content: center;
   
 }
-.navItem:hover{
+
+.navItem:hover,.navItemD:hover,.reg:hover,.signIn:hover{
   color: white;
 }
 #cont{
   border: none;
 }
 .SignInReg{
-width: 400px;
 
 display: flex;
 
@@ -47,9 +54,7 @@ display: flex;
  justify-content: center;
  align-items: center;
 }
-.signIn:hover{
-  color: white;
-}
+
 .reg{
   text-decoration: none;
   width: 100px;
@@ -57,7 +62,33 @@ display: flex;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
-.reg:hover{
-  color: white;
+
+.listIcon{
+  font-size: 20px;
+  display: none;
+}
+.navDropDown{
+  margin-top: 60px;
+  width: 100px;
+  background-color: teal;
+}
+.navItemD{
+  text-decoration: none;
+  color: black;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  
+  .navItem {
+    
+    display: none;
+  }
+  .listIcon{
+    display: block;
+  }
 }
