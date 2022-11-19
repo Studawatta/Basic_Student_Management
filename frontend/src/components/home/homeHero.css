@@ -1,3 +1,6 @@
+.footer{
+    height: 100px;
+}
 .heroCont{
     width: 85%;
     margin-left: auto;
@@ -6,6 +9,7 @@
 .Header{
      width: 100%;
 
+height: 300px;
      margin-top:60px;
      display: flex;
      justify-content: center;
@@ -14,7 +18,7 @@
     
 }
 .headerImg{
-    width: 100%;
+    width: 70%;
     height: 350px;
     opacity: 0.2;
 }
@@ -25,4 +29,79 @@
     margin-left: auto;
     margin-right: auto;
     color: #004d4d;
+    font-size: 40px;
+}
+.title{
+    width: 60%;
+    font-size: 24px;
+    
+    font-weight: 600;
+}
+.regButtonCont{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.regButton{
+    height: 40px;
+    width: 300px;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-image: linear-gradient(180deg,#004d4d,#b3ffff);
+    cursor: pointer;
+    transition:1s;
+   
+}
+.regButton:hover{
+    width: 400px;
+    
+}
+.subHeader{
+    color: #002080;
+    font-weight: bold;
+    font-size: 28px;
+}
+.BeniCont{
+    display: flex;
+    justify-content: space-between;
+}
+.Beni{
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 0 5px 5px #b3b3b3;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+
+}
+.BeniImg{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+   
+}
+.BeniHeader{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+.BeniPara{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+
+}
+.para{
+  width: 90%;
+  font-style: italic;
+  font-size: 18px;
 }
