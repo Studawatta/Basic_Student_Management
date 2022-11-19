@@ -1,12 +1,12 @@
 import React from 'react';
 import Nav from '../navBar/Nav';
+import HomeHero from './HomeHero';
 
 const Home = () => {
     return (
         <div>
             <Nav/>
-            <h1>Welcome to the home</h1>
-            <p>How are you? I am sandun</p>
+            <HomeHero/>
         </div>
     );
 }

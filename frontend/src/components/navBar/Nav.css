@@ -11,27 +11,25 @@
 }
 .Container{
   display: flex;
-  
   width: 85%;
   justify-content: space-between;
+  
 }
 .navItemCont{
   display: flex;
-  width: 400px;
-  
-  /* justify-content: space-between;
-  background-color: red; */
+  width: 250px;
+ 
+  justify-content: space-between;
+ 
 }
 .navItem{
   text-decoration: none;
   width: 100px;
-
   border-right: 1px solid #ccc;
   color: black;
   display: flex;
   align-items: center;
-  justify-content: center;
-  
+justify-content: center;
 }
 
 .navItem:hover,.navItemD:hover,.reg:hover,.signIn:hover{
@@ -40,24 +38,30 @@
 #cont{
   border: none;
 }
+#home{
+justify-content: start;
+width: 75px;
+}
 .SignInReg{
 
 display: flex;
-
+width: 180px;
+justify-content: space-between;
 }
 .signIn{
  text-decoration: none;
- width: 100px;
+width: 100px;
  color: black;
  border-right: 1px solid #ccc;
  display: flex;
  justify-content: center;
  align-items: center;
+ 
 }
 
 .reg{
   text-decoration: none;
-  width: 100px;
+  
   color: black;
   display: flex;
   align-items: center;
@@ -68,19 +72,30 @@ display: flex;
 .listIcon{
   font-size: 20px;
   display: none;
+  cursor: pointer;
+}
+.listIcon:hover{
+  color: white;
 }
 .navDropDown{
-  margin-top: 60px;
-  width: 100px;
+ 
   background-color: teal;
+  position: fixed;
+  margin-top: 38px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
 }
 .navItemD{
   text-decoration: none;
   color: black;
   height: 40px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid #ccc;
+  
 }
 @media screen and (max-width: 600px) {
   

@@ -1,6 +1,8 @@
 
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import Home from "./components/home/Home";
+// import AllStudents from "./components/teacherDash/Allstudents";
+// import AddStudent from "./components/teacherDash/AddStudent";
 
 
 
@@ -18,7 +20,8 @@ function App() {
 
 <Route path='/' element={<Home/>} />
 
-{/* <Route path="/" element={<Allstudents/>} /> */}
+{/* <Route path="/all" element={<AllStudents/>} />
+<Route path="/add" element={<AddStudent/>} /> */}
 </Routes>
 
 

@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import './Nav.css';
 import { FaListUl } from "react-icons/fa";
 
 const Nav = () => {
+    const [showDrop,setShowDrop]= useState(false);
     return (
         <div >
             
             <div className='nav'>
                 <div className='Container'>
                 <div className='navItemCont'>
-                    <FaListUl className='listIcon'/>
+                    <FaListUl className='listIcon'
+                    onClick={()=>{
+                        if(showDrop===true){
+                            setShowDrop(false);
+                        }
+                        else
+                          setShowDrop(true);
+                        
+                    }}
+                    />
                    
-                    <Link className='navItem'>Home</Link>
+                    <Link className='navItem' id='home'>Home</Link>
                     <Link className='navItem'>About</Link>
                     <Link className='navItem' id="cont">Contact</Link>
                 </div>
@@ -23,11 +33,16 @@ const Nav = () => {
                 </div>
                
             </div>
-                  <div className='navDropDown'>
+            {
+                showDrop? (
+<div className='navDropDown'>
                     <Link className='navItemD'>Home</Link>
                     <Link className='navItemD'>About</Link>
                     <Link className='navItemD' id="cont">Contact</Link>
                     </div>
+                ) :""
+            }
+                  
                 
             
         </div>
