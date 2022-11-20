@@ -1,10 +1,12 @@
 import React from 'react';
 import './userSignup.css';
+import { AiOutlineClose } from "react-icons/ai";
 const UserSignup = () => {
     return (
-        <div>
+        <div className='wrapper'>
             <div className='signupCont'>
-                <div>
+                <div className='innerCont'>
+                    <AiOutlineClose className='closeButton'/>
                 <h2 className='mainHeader'>Register</h2>
                 <form className='innerForm'>
                 

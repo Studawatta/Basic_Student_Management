@@ -1,18 +1,43 @@
+.wrapper{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.2);
+    
+    display: flex;
+    justify-content: center;
+
+
+}
+
 .signupCont{
     margin-left: 100px;
     margin-top: 100px;
     width: 40%;
-    height: 570px;
-    box-shadow: 0 0 5px 5px #ccc;
+    height: fit-content;
+   padding: 20px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
+    background-color: white;
   
     
 }
+.innerCont{
+    
+    width: 100%;
+    height: fit-content;
+}
 .innerForm{
     width: 300px;
-    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
     
 }
 .mainHeader{
@@ -21,6 +46,8 @@
     width: fit-content;
     font-size: 40px;
     color: #004d4d;
+    
+    margin-top: 0px;
 }
 .formInput{
     width: 100%;
@@ -30,6 +57,7 @@
  display: flex;
  align-items: center;
  justify-content: center;
+ 
 }
 input{
     width: 93%;
@@ -58,4 +86,14 @@ button{
 }
 button:hover{
     background-color: #004d4d;
+}
+.closeButton{
+    
+   
+   margin-left: auto;
+   display: block;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+  
 }
