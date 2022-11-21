@@ -61,7 +61,7 @@ width: 100px;
 
 .reg{
   text-decoration: none;
-  
+  cursor: pointer;
   color: black;
   display: flex;
   align-items: center;

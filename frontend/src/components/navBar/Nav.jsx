@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+// import { SignupContext } from '../home/SignupContext';
 import { Link } from "react-router-dom";
 import './Nav.css';
 import { FaListUl } from "react-icons/fa";
 
 const Nav = () => {
     const [showDrop,setShowDrop]= useState(false);
+    // const {showSignup, setShowSignup} = useContext(SignupContext);
     return (
         <div >
             
@@ -28,7 +30,10 @@ const Nav = () => {
                 </div>
                 <div className='SignInReg'>
                     <Link className='signIn'>Sign In</Link>
-                    <Link className='reg'>Register</Link>
+                    <div className='reg'
+                    
+                    // onClick={()=>{setShowSignup(true)}}
+                    >Register</div>
                 </div>
                 </div>
                

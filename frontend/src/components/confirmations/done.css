@@ -1,0 +1,39 @@
+.container{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    overflow: auto;
+    width: fit-content;
+    padding: 50px;
+    display: block;
+    background-color: white;
+    border: 4px solid #009933;
+    border-radius: 20px;
+    
+    
+    
+}
+h1{
+    color:#004d4d;;
+}
+.button{
+    background-color: teal;
+    width: 70px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.button:hover{
+    background-color: #004d4d;
+}

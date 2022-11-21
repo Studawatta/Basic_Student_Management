@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './homeHero.css';
 import students from "../../images/students.png"
 import admin_dash from "../../images/admin_dash.jpg"
-
+import { SignupContext } from './SignupContext';
+import UserSignup from '../userSignUp/UserSignup';
 const HomeHero = () => {
+
+    const [showSignup,setShowSignup] = useState(false);
+
     return (
         <div className='heroCont'>
+            <SignupContext.Provider value={{showSignup, setShowSignup}}>
+                {showSignup? (<UserSignup/>): ""}
+            </SignupContext.Provider>
             <div className='Header'>
 
                <img src={students} alt="headerImg" className='headerImg' />
@@ -16,7 +23,10 @@ const HomeHero = () => {
                 manages information and automates processes.</p>
             </div>
             <div className='regButtonCont'>
-                <div className='regButton'>Register Now</div>
+                <div className='regButton'
+                onClick={()=>{setShowSignup(true)}}
+                >Register Now
+                </div>
             </div>
             <div>
                 <p className='subHeader'>Benifists to Administrators</p>
