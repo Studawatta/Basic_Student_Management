@@ -32,13 +32,17 @@ const UserSignup = () => {
             setUsername("");
             setEmail("");
             setPassword("");
+            setConfirme({
+                message: "Successfully Registered",
+                isDone:true,
+            })
         }).catch((err)=>{
-            alert(err);
+            setConfirme({
+                message: "Error In Registration",
+                isDone:true,
+            })
         })
-        setConfirme({
-            message: "Successfully Registered",
-            isDone:true,
-        })
+        
         // setShowSignup(false);
     }
     return (

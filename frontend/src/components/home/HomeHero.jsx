@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState } from 'react';
 import './homeHero.css';
 import students from "../../images/students.png"
 import admin_dash from "../../images/admin_dash.jpg"
@@ -6,13 +6,11 @@ import { SignupContext } from './SignupContext';
 import UserSignup from '../userSignUp/UserSignup';
 const HomeHero = () => {
 
-    const [showSignup,setShowSignup] = useState(false);
+    const {showSignup, setShowSignup} = useContext(SignupContext);
 
     return (
         <div className='heroCont'>
-            <SignupContext.Provider value={{showSignup, setShowSignup}}>
-                {showSignup? (<UserSignup/>): ""}
-            </SignupContext.Provider>
+           
             <div className='Header'>
 
                <img src={students} alt="headerImg" className='headerImg' />

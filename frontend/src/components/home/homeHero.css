@@ -60,6 +60,7 @@ height: 300px;
 }
 .regButton:hover{
     width: 350px;
+  
     
     
 }
@@ -75,16 +76,20 @@ height: 300px;
 .Beni{
     width: 500px;
     height: 500px;
-    box-shadow: 0 0 5px 5px #b3b3b3;
+    /* box-shadow: 0 0 5px 5px #b3b3b3; */
+    border:2px solid black;
     border-radius: 10px;
+   
     /* border: 1px solid black; */
+
 
 }
 .BeniImg{
+   border: none;
     width: 100%;
     height: 50%;
     border-radius: 10px 10px 0 0;
-   
+   box-shadow: 0 -2px 0 1px black;
 }
 .BeniHeader{
     margin-left: auto;
