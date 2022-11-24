@@ -73,7 +73,7 @@ input{
     
     height: 100px;
 }
-button{
+.buttonCont button{
     
     height: 35px;
     width: 50%;
@@ -85,7 +85,7 @@ button{
     font-size: 20px;
     
 }
-button:hover{
+.buttonCont button:hover{
     background-color: #004d4d;
 }
 .closeButton{

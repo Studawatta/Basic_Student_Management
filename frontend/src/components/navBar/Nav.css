@@ -56,7 +56,7 @@ width: 100px;
  display: flex;
  justify-content: center;
  align-items: center;
- 
+ cursor: pointer;
 }
 
 .reg{
@@ -106,4 +106,90 @@ width: 100px;
   .listIcon{
     display: block;
   }
+}
+.login {
+  display: none;
+}
+.loginOpen{
+  display: block;
+  width: 300px;
+  height: 315px;
+  background-color: #1f2f62;
+  /* position:absolute; */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: 113px;
+  z-index: 1;
+  visibility: visible;
+  animation-name: open;
+  animation-duration: 1s;
+  overflow: hidden;
+
+}
+
+.loginInner{
+  
+  width: 200px;
+  margin: auto;
+}
+.loginInner h1{
+  text-align: center;
+  color: #d9d9d9;
+}
+.loginInner p{
+  font-weight: 600;
+  color:#d9d9d9;
+}
+.loginInner input{
+  border: 1px solid black;
+  padding: 2px 10px 2px 10px;
+  width: 180px;
+}
+
+.loginInner button{
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: block;
+  height: 35px;
+  width: 50%;
+  cursor: pointer;
+  background-color: teal;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+.loginHide{
+  display: block;
+  width: 300px;
+  height: 0px;
+  background-color: #1f2f62;
+  position:absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: 113px;
+ 
+  z-index: 1;
+  animation-name: hide;
+  animation-duration: 1s;
+  overflow: hidden;
+}
+@keyframes open {
+  from {height: 0px;}
+  to {height:315px; }
+  
+}
+@keyframes hide {
+  from {height: 315px;}
+  to {height: 0px; }
+  
 }

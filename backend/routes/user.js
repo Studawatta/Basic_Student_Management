@@ -24,4 +24,25 @@ router.route("/register").post(
 
     
 )
+
+router.route("/login").post(
+    (req,res)=>{
+  
+       const {username,password} = req.body;
+        User.findOne({username: username},(err,user)=>{
+            if(user){
+                if(password === user.password){
+                    res.send({message:"login sucess",user:user})
+                }else{
+                    res.send({message:"Wrong credentials"})
+                }
+            }
+            else{
+                res.send("not register")
+            }
+        })
+        
+
+    }
+)
 module.exports = router;
