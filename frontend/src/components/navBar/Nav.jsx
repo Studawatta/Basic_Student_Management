@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { SignupContext } from '../home/SignupContext';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import './Nav.css';
 import { FaListUl } from "react-icons/fa";
@@ -13,6 +14,8 @@ const Nav = () => {
     const [username, setUsername]  = useState("");
     const [ password, setPassword] = useState("");
 
+    const navigate = useNavigate();
+
     function login(e){
         e.preventDefault();
 
@@ -23,8 +26,10 @@ const Nav = () => {
        
 
         axios.post("http://localhost:5000/user/login",user).then((res)=>{
-            // alert("Registered");
+            
             alert(res.data.message);
+            navigate("/userHome",{params:{user:username}});
+           
         }).catch((err)=>{
             console.log(err);
         })

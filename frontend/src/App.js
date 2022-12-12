@@ -1,6 +1,7 @@
 
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import Home from "./components/home/Home";
+import UserHome from "./components/userHome/UserHome";
 import UserSignup from "./components/userSignUp/UserSignup";
 // import AllStudents from "./components/teacherDash/Allstudents";
 // import AddStudent from "./components/teacherDash/AddStudent";
@@ -20,6 +21,8 @@ function App() {
  
 
 <Route path='/' element={<Home/>} />
+<Route path='/userHome' element={<UserHome/>} />
+
 
 
 {/* <Route path="/all" element={<AllStudents/>} />

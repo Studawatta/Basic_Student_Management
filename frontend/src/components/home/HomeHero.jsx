@@ -2,6 +2,7 @@ import React, {useContext, useState } from 'react';
 import './homeHero.css';
 import students from "../../images/students.png"
 import admin_dash from "../../images/admin_dash.jpg"
+import admin_dash_1 from "../../images/admin_dash_1.jpg"
 import { SignupContext } from './SignupContext';
 import UserSignup from '../userSignUp/UserSignup';
 const HomeHero = () => {
@@ -42,7 +43,18 @@ const HomeHero = () => {
                     </p>
                 </div>
              </div>
-             <div className='Beni'></div>
+             <div className='Beni'>
+             <img src={admin_dash_1} className="BeniImg"/>
+                <p className='BeniHeader'>Student Dashboard</p>
+                <div className='BeniPara'>
+                    <p className='para'>Comprehensive, cutomizable student dashboard
+                        provides at-a-glance access and editing capabilities
+                        for numerous areas, including: academics, alerts,
+                        behavior, contact info, demographics, finance,
+                        schedules, and transcripts.
+                    </p>
+                </div>
+             </div>
             </div>
             
 
