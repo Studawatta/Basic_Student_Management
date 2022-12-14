@@ -1,4 +1,4 @@
-import React , {useContext, useState }  from 'react';
+import React , {useContext, useState, useEffect, useRef }  from 'react';
 import axios from 'axios';
 import './userSignup.css';
 import { SignupContext } from '../home/SignupContext';
@@ -8,6 +8,8 @@ import Done from '../confirmations/Done';
 const UserSignup = () => {
 
     const {showSignup, setShowSignup} = useContext(SignupContext);
+    let signupRef = useRef();
+    
     const [confirme,setConfirme] = useState({
         message:"",
         isDone:false,
@@ -17,6 +19,21 @@ const UserSignup = () => {
     const [ password, setPassword] = useState("");
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        let handler = (e) => {
+            if(!signupRef.current.contains(e.target)) {
+                setShowSignup(false);
+                // console.log(signupRef.current);
+            }
+           
+        };
+        document.addEventListener("mousedown", handler);
+
+        return () => {
+            document.removeEventListener("mousedown", handler);
+        }
+    })
 
     function sendData(e){
         e.preventDefault();
@@ -47,7 +64,7 @@ const UserSignup = () => {
     }
     return (
         <div className='wrapper'>
-            <div className='signupCont'>
+            <div className='signupCont' ref={signupRef}>
                 <div className='innerCont'>
                     <AiOutlineClose className='closeButton'
                      onClick={()=>{setShowSignup(false)}}
