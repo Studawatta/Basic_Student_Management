@@ -74,7 +74,7 @@ const Nav = () => {
                     >Sign In</div>
                     <div className='reg'
                     
-                    onClick={()=>{setShowSignup(true)}}
+                    onClick={()=>{setShowSignup(!showSignup)}}
                     >Register</div>
                 </div>
 
