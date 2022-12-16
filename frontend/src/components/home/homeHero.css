@@ -55,12 +55,11 @@ height: 300px;
     border-radius: 10px;
     background-image: linear-gradient(180deg,#004d4d,#b3ffff);
     cursor: pointer;
-    transition:1s;
+    transition:0.5s;
    
 }
 .regButton:hover{
     width: 350px;
-  
     
     
 }

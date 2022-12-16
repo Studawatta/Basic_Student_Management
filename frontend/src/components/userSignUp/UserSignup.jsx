@@ -44,7 +44,8 @@ const UserSignup = () => {
             password
         }
 
-        axios.post("http://localhost:5000/user/register",newUser).then(()=>{
+        axios.post("http://localhost:8800/api/auth/register",newUser).then(()=>{
+            
             // alert("Registered");
             setUsername("");
             setEmail("");
@@ -54,6 +55,7 @@ const UserSignup = () => {
                 isDone:true,
             })
         }).catch((err)=>{
+            // alert(err);
             setConfirme({
                 message: "Error In Registration",
                 isDone:true,

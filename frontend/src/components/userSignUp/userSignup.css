@@ -89,9 +89,7 @@ input{
     background-color: #004d4d;
 }
 .closeButton{
-    
-   
-   margin-left: auto;
+     margin-left: auto;
    display: block;
     font-size: 40px;
     color: red;

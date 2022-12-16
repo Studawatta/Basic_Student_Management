@@ -8,8 +8,8 @@
     width: fit-content;
     padding: 50px;
     display: block;
-    background-color: white;
-    border: 4px solid #009933;
+    background-color: #ccc;
+    border: 4px solid #1f2f62;
     border-radius: 20px;
     
     
@@ -19,7 +19,7 @@ h1{
     color:#004d4d;;
 }
 .button{
-    background-color: teal;
+    background-color: #2b4088;
     width: 70px;
     text-align: center;
     color: white;
@@ -35,5 +35,5 @@ h1{
     
 }
 .button:hover{
-    background-color: #004d4d;
+    background-color: #1f2f62;
 }
