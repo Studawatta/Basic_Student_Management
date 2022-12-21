@@ -25,7 +25,7 @@ const Nav = () => {
         }
        
 
-        axios.post("http://localhost:5000/user/login",user).then((res)=>{
+        axios.post("http://localhost:8800/user/login",user).then((res)=>{
             
             alert(res.data.message);
             navigate("/userHome",{params:{user:username}});
