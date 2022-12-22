@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import { SignupContext } from '../home/SignupContext';
-import "./done.css";
+import "./Error.css";
 
-const Done = ({message}) => {
+const Error = ({message}) => {
 
     const {showSignup, setShowSignup} = useContext(SignupContext);
 
@@ -21,4 +21,4 @@ const Done = ({message}) => {
     );
 }
 
-export default Done;
+export default Error;

@@ -2,9 +2,10 @@
     height: 100px;
 }
 .heroCont{
-    width: 85%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
+    background-color: #002080;
 }
 .Header{
      width: 100%;

@@ -5,37 +5,77 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import './Nav.css';
 import { FaListUl } from "react-icons/fa";
+import { AuthContext } from '../../context/AuthContext';
 
 const Nav = () => {
+
+    const [credentials, setCredentials] = useState({
+        username: undefined,
+        password: undefined
+    });
+
+    const { loading, error, dispatch} = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
     const [showDrop,setShowDrop]= useState(false);
     const {showSignup, setShowSignup} = useContext(SignupContext);
     const [showLogin, setShowLogin] = useState('a');
     
-    const [username, setUsername]  = useState("");
-    const [ password, setPassword] = useState("");
+    // const [username, setUsername]  = useState("");
+    // const [ password, setPassword] = useState("");
 
-    const navigate = useNavigate();
+    
 
-    function login(e){
-        e.preventDefault();
+    // function login(e){
+    //     e.preventDefault();
 
-        const user = {
-            username,
-            password
-        }
+    //     const user = {
+    //         username,
+    //         password
+    //     }
        
 
-        axios.post("http://localhost:8800/user/login",user).then((res)=>{
+    //     axios.post("http://localhost:8800/user/login",user).then((res)=>{
             
-            alert(res.data.message);
-            navigate("/userHome",{params:{user:username}});
+    //         alert(res.data.message);
+    //         navigate("/userHome",{params:{user:username}});
            
-        }).catch((err)=>{
-            console.log(err);
-        })
+    //     }).catch((err)=>{
+    //         console.log(err);
+    //     })
         
-        // setShowSignup(false);
-    }
+    //     // setShowSignup(false);
+    // }
+
+    const handleChange = (e) => {
+        setCredentials((prev)=>({ ...prev, [e.target.id]: e.target.value}));
+    };
+
+    const handleClick = async (e) => {
+        e.preventDefault();
+        dispatch({ type: "LOGIN_START" });
+        try {
+
+            const res = await axios.post("http://localhost:8800/api/auth/login", credentials);
+            dispatch({type: "LOGIN_SUCCESS", payload: res.data});
+            // alert("login")
+            navigate("/userHome");
+              
+        } catch (err) {
+            dispatch({type: "LOGIN_FAILURE", payload: err.response.data});
+            console.log(err);
+        }
+    //     axios.post("http://localhost:8800/api/auth/login",credentials).then(()=>{
+            
+    //      alert("login");
+       
+    // }).catch((err)=>{
+    //      alert(err);
+       
+    // })
+    };
+    
    
     return (
         <div >
@@ -81,20 +121,17 @@ const Nav = () => {
                 <div className={`login${showLogin===true ? 'Open': showLogin===false ?'Hide' : ""} `}  >
                     <div className='loginInner'>
                       <h1>Sign In</h1>
-           <form onSubmit={login}>
+           <form >
             <p>Username</p>
-            <input className='loginInput'
-             onChange={(e)=>{
-                setUsername(e.target.value);
-            }}
+            <input className='loginInput' type="text" id="username"
+             onChange={handleChange}
             />
             <p>Password</p>
-            <input className='loginInput'
-            onChange={(e)=>{
-                setPassword(e.target.value);
-            }}
+            <input className='loginInput' type="password" id="password"
+            onChange={handleChange}
             />  
-             <button type='submit'>Sign In</button>
+             <button id='signBtn' onClick={handleClick} >Sign In</button>
+             {error && <span>{error.message}</span>}
             </form>
                  </div>
             

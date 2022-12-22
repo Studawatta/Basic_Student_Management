@@ -5,6 +5,7 @@ import { SignupContext } from '../home/SignupContext';
 import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 import Done from '../confirmations/Done';
+import Error from '../errors/Error';
 const UserSignup = () => {
 
     const {showSignup, setShowSignup} = useContext(SignupContext);
@@ -13,6 +14,11 @@ const UserSignup = () => {
     const [confirme,setConfirme] = useState({
         message:"",
         isDone:false,
+    })
+
+    const [error, setError] = useState({
+        message:"",
+        err:false
     })
     const [username, setUsername]  = useState("");
     const [email, setEmail] = useState("");
@@ -56,9 +62,9 @@ const UserSignup = () => {
             })
         }).catch((err)=>{
             // alert(err);
-            setConfirme({
+            setError({
                 message: "Error In Registration",
-                isDone:true,
+                err:true,
             })
         })
         
@@ -74,6 +80,7 @@ const UserSignup = () => {
                 <h2 className='mainHeader'>Register</h2>
 
                 {confirme.isDone && <Done message={confirme.message}/>}
+                {error.err && <Error message={error.message}/>}
 
                 <form className='innerForm' onSubmit={sendData}>
                 
