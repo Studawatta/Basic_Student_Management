@@ -10,8 +10,9 @@ const HomeHero = () => {
     const {showSignup, setShowSignup} = useContext(SignupContext);
 
     return (
-        <div className='heroCont'>
-           
+        <div className='heroContW'>
+           <div className='heroCont'>
+            
             <div className='Header'>
 
                <img src={students} alt="headerImg" className='headerImg' />
@@ -59,6 +60,7 @@ const HomeHero = () => {
             
 
             <div className='footer'></div>
+            </div>
         </div>
     );
 }

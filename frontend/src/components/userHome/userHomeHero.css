@@ -1,0 +1,70 @@
+.userHeroCont{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.userHero{
+   
+    width: 85%;
+}
+.userHeader{
+    width: fit-content;
+    margin: auto;
+    color: #000;
+}
+.userCollectionWrapper{
+    display: flex;
+    
+    margin-top: 50px;
+}
+.userCollectionCont{
+    background-color: #f2f2f2;
+    width: 40%;
+    padding-bottom: 40px;
+    padding-top: 5px;
+    
+}
+.userCollection{
+   
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userCollection button{
+    background-color: teal;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+.userCollection button:hover{
+    background-color:  #004d4d;;
+}
+.newCollectionForm{
+    border: 1px solid #ccc;
+    width: fit-content;
+   height: fit-content;
+   box-shadow: 0 5px 5px 0 black;
+}
+.newCollectionForm input{
+    width: 300px;
+    margin-top: 10px;
+}
+.newCollectionFormInner{
+    width: fit-content;
+    
+    padding: 10px;
+}
+.newCollectionFormH{
+    font-size: 20px;
+    font-weight:600;
+}

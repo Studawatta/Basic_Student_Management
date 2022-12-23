@@ -13,13 +13,12 @@ const Nav = () => {
         username: undefined,
         password: undefined
     });
-
-    const { loading, error, dispatch} = useContext(AuthContext);
+    const { user,loading, error, dispatch} = useContext(AuthContext);
 
     const navigate = useNavigate();
 
     const [showDrop,setShowDrop]= useState(false);
-    const {showSignup, setShowSignup} = useContext(SignupContext);
+    // const {showSignup, setShowSignup} = useContext(SignupContext);
     const [showLogin, setShowLogin] = useState('a');
     
     // const [username, setUsername]  = useState("");
@@ -55,9 +54,10 @@ const Nav = () => {
     const handleClick = async (e) => {
         e.preventDefault();
         dispatch({ type: "LOGIN_START" });
+
         try {
 
-            const res = await axios.post("http://localhost:8800/api/auth/login", credentials);
+            const res = await axios.post("http://localhost:8800/api/auth/login", credentials,{withCredentials: true});
             dispatch({type: "LOGIN_SUCCESS", payload: res.data});
             // alert("login")
             navigate("/userHome");
@@ -98,25 +98,31 @@ const Nav = () => {
                     <Link className='navItem'>About</Link>
                     <Link className='navItem' id="cont">Contact</Link>
                 </div>
-                <div className='SignInReg'>
-                    <div className='signIn'
-                    onClick={()=>{
-                        if(showLogin===true){
-                            setShowLogin(false);
-                        }
-                        else if(showLogin===false){
-                            setShowLogin(true)
-                        }
-                        else{
-                            setShowLogin(true);
-                        }
-                    }}
-                    >Sign In</div>
-                    <div className='reg'
-                    
-                    onClick={()=>{setShowSignup(!showSignup)}}
-                    >Register</div>
-                </div>
+                {user? (<button onClick={()=>{
+                dispatch({ type: "LOGOUT" });
+                navigate("/")
+            }}>log out</button>) : (
+                                    <div className='SignInReg'>
+                                    <div className='signIn'
+                                    onClick={()=>{
+                                        if(showLogin===true){
+                                            setShowLogin(false);
+                                        }
+                                        else if(showLogin===false){
+                                            setShowLogin(true)
+                                        }
+                                        else{
+                                            setShowLogin(true);
+                                        }
+                                    }}
+                                    >Sign In</div>
+                                    <div className='reg'
+                                    
+                                    // onClick={()=>{setShowSignup(!showSignup)}}
+                                    >Register</div>
+                                </div>
+                )}
+
 
                 <div className={`login${showLogin===true ? 'Open': showLogin===false ?'Hide' : ""} `}  >
                     <div className='loginInner'>
